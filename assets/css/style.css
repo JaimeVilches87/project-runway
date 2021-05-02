@@ -35,3 +35,9 @@ header a {
     border-bottom: 2px solid var(--primary-color);
     color: var(--primary-color);
 }
+
+.effects a:hover{ 
+    color: var(--lightskyblue);
+    font-weight: bold;
+    text-shadow: 0px 0px 20px var(--lightskyblue);
+  }
