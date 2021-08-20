@@ -66,7 +66,6 @@ header a {
     border-bottom-right-radius: 30px 30px;
     background-size: cover;
     background-position:  100% 13%;
-    background-attachment: fixed;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -104,23 +103,23 @@ main {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
-  }
+}
   
-  .me {
+.me {
     flex: 0 0 20%;
     text-align: right;
     padding-right: 15px;
     border-right: 4px solid var(--primary-color);
     font-size: 3vw;
     line-height: 1.1;
-  }
+}
 
-  .me-info {
+.me-info {
     flex: 0 0 77%;
     
-  }
+}
 
-  
+
 .work-grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -128,12 +127,13 @@ main {
     flex: 0 0 77%;
 }
 
-.work-item-project {
 
+
+
+.work-item-project {
     border: 5px solid var(--secondary-color);
-    
     color: var(--primary-color);
-    min-height: 150px;
+    min-height: 300px;
     max-height: 150px;
     flex-basis: calc(50% - 1em);
     display: flex;
@@ -145,17 +145,32 @@ main {
     background-size: 150%;
     transition: all 0.5s;
     font-size: 0.9rem;
+}
 
+.work-item-project:first-child {
+    min-height: 400px;
+flex-basis: 100%;
 }
   
+
   
- .challenge-1 {
+.challenge-1 {
     background-image: url("../images/Horiseon.jpg");
 }
   
 .run-buddy {
     background-image: url("../images/run-buddy.jpg");
 }
+.taskinator{
+    background-image: url("../images/taskinator.jpg");
+}
+.code-quiz{
+    background-image: url("../images/code-quiz.jpg");
+}
+.work-day{
+    background-image: url("../images/work-day.JPG");
+}
+
 
 .info {
     display: flex;
