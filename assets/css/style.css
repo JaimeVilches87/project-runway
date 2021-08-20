@@ -1,3 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: #404040;
+    --primary-color: blue;
+    --secondary-color: gray;
+    --border-color: #333366;
+    --color-opacity: rgba(135, 206, 250, 0.8);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+  }
+
 header {
     display: flex; 
     justify-content: space-between;
@@ -36,11 +58,6 @@ header a {
     color: var(--primary-color);
 }
 
-.effects a:hover{ 
-    color: var(--primary-color);
-    font-weight: bold;
-    text-shadow: 0px 0px 20px var(--primary-color);
-}
 
 .hero {
     height: 300px;
@@ -63,55 +80,148 @@ header a {
 }
 
 .background { 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     position: relative;
     line-height: 1.5;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 5%;
     opacity: .8;
-}
-  
-.background.title { 
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-  
-.background.subtitle{
-    opacity: .95; 
     font-size: 30px;
-}  
+}
+
+main {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .about-me-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    justify-content: center;
-    margin-top: 50px;
+    margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
   }
   
-  
-.about-me-grid-container {
-    width: 80%;
-    display: grid;
-    gap: 10px 10px; 
-}
-  
-.about-me-item.about-me-title {
-    padding-top: 0px;
-    font-size: 32px;
-    grid-row: 1 / span 4;
-    padding-right: 10px;
+  .me {
+    flex: 0 0 20%;
     text-align: right;
-    border-right: 2px solid coral;
+    padding-right: 15px;
+    border-right: 4px solid var(--primary-color);
+    font-size: 3vw;
+    line-height: 1.1;
+  }
+
+  .me-info {
+    flex: 0 0 77%;
+    
+  }
+
+  
+.work-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 77%;
+}
+
+.work-item-project {
+
+    border: 5px solid var(--secondary-color);
+    
+    color: var(--primary-color);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.9rem;
+
 }
   
-.about-me-item.goals {
-    padding-left: 15px;
+  
+ .challenge-1 {
+    background-image: url("../images/Horiseon.jpg");
 }
   
-.about-me-item.info {
-    padding-left: 15px;
-    grid-column: 2;
-    grid-row: 3;
+.run-buddy {
+    background-image: url("../images/run-buddy.jpg");
 }
+
+.info {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
+}
+
+.info a {
+    color: var(--primary-color);
+    padding: 5px;
+    text-decoration: underline;
+    font-size: 1.3rem;
+    display: inline-block;
+
+}
+
+@media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .about-me-wrap > h2,
+    .about-me-wrap > div {
+      flex: 0 0 100%;
+    }
+  
+    .about-me-wrap > h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .work-item-project {
+      flex-basis: 100%;
+    }
+  
+   
+  
+    .hero {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
