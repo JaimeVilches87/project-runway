@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 :root {
-    --background-color: #404040;
-    --primary-color: blue;
+    --background-color: #5d5d61c2;
+    --primary-color: rgb(2, 2, 22);
     --secondary-color: gray;
     --border-color: #333366;
     --color-opacity: rgba(135, 206, 250, 0.8);
